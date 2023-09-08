@@ -9,7 +9,7 @@ from nltk.sentiment import SentimentIntensityAnalyzer
 st.set_option('deprecation.showPyplotGlobalUse', False)
 
 tab_1,tab_2 = st.tabs(['VIEW PREDICTION','DATAFRAME AND DOWNLOAD'])
-
+nltk.download('vader_lexicon')
 model = pickle.load(open("rf_model", 'rb'))
 
 st.sidebar.title("Data Input")
